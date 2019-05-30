@@ -1,0 +1,25 @@
+<section id="gigs" class="container">
+    <h1>All Collabo Jobs Available</h1>
+
+    {{#each gigs}}
+
+    <div class="collab">
+        <h2>{{title}}</h3>
+        <p><span style="font-weight: 800; font-size: 18px; margin-left: 20px; padding-right: 5px; text-align: justify; "> Project Description: </span>{{description}}</p>
+        <ul>
+            <li>Pay: ₦{{budget}}</li>
+            <li style="margin-left: 45%;"><a href="mailto:{{contact_email}}" class="btn btn-reverse" style="border-radius: 10px ">Collabo</a></li>
+        </ul>
+        <div class="tech">
+            <p>Required Stack : <span>{{technologies}}</span></p>
+        </div>
+    </div>
+
+    {{else}}
+    <p>No Gigs available</p>
+
+    {{/each}}
+
+
+
+</section>

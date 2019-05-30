@@ -1,0 +1,43 @@
+<section id="add" class="container">
+  <div class="form-wrap">
+    <div class="add-headers">
+      <h1>Add A Collabo Project</h1>
+      <p>Please fill in the required information</p>
+    </div>
+
+    {{#each errors}}
+    <div class="error">
+      <p>{{text}}</p>
+    </div>
+    {{/each}}
+    <form action="/gigs/add" method="POST">
+      <div class="input-group">
+        <label for="title">Collabo Title</label>
+        <input type="text" name="title" id="title" class="input-box" placeholder="Example: JavaScript Developer"
+          maxlength="100" value={{title}}>
+      </div>
+      <div class="input-group">
+        <label for="technologies">Required Stack ( You can have multiple technologies seperated by commas )</label>
+        <input type="text" name="technologies" id="technologies" class="input-box"
+          placeholder="eg. javascript, react, django" maxlength="120" value={{technologies}}>
+      </div>
+      <div class="input-group">
+        <label for="budget">Price: ( Leave blank for Negotiable, or 0 for partnership )</label>
+        <input type="number" name="budget" id="budget" class="input-box"
+          placeholder="The price would be displayed in dollars" value={{budget}}>
+      </div>
+      <div class="input-group">
+        <label for="description">About Task</label>
+        <textarea name="description" id="description" class="input-box"
+          placeholder="Describe the task and what the other person would probably be working on...."
+          rows="10">{{description}}</textarea>
+      </div>
+      <div class="input-group">
+        <label for="budget">Contact Email</label>
+        <input type="email" name="contact_email" id="contactemail" class="input-box"
+          placeholder="This email would be used to contact you" value={{contact_email}}>
+      </div>
+      <input type="submit" value="New Collab" class="btn btn-reverse">
+    </form>
+  </div>
+</section>
