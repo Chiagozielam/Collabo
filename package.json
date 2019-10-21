@@ -1,22 +1,25 @@
 {
   "name": "colabo",
   "version": "1.0.0",
-  "description": "A platfrm to get colaborative projects among technologists",
+  "description": "A platform to get colaborative projects among technologists",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "dev": "nodemon app.js"
+    "dev": "nodemon app.js",
+    "db:migrate": "sequelize db:migrate"
   },
   "author": "Daniel Don",
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "dotenv": "^8.0.0",
     "express": "^4.17.0",
     "express-handlebars": "^3.1.0",
-    "pg": "^7.11.0",
+    "pg": "^7.12.1",
     "pg-hstore": "^2.3.2",
     "psql": "0.0.1",
-    "sequelize": "^5.8.6"
+    "sequelize": "^5.8.6",
+    "sequelize-cli": "^5.5.0"
   },
   "engines": {
     "node": "8.5.0",
