@@ -53,7 +53,7 @@ router.post("/add", (req, res) => {
       budget = "Negotiable"
     }
     if(budget == 0) {
-      budget = "Partnership"
+      budget = "Partnership / Pair learning"
     }else{
       budget = `$ ${budget}`
     }
